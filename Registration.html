@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!-- harus ada tombol back!!-->
+<!-- ux = gimana cara kita membuat simple mungkin sehingga user ga perlu diajarin, user ga ngerti apa" dan gamau ribet-->
+<!-- ada js -->
+<html>
+    <head>
+        <title>
+            Registrasi
+        </title>
+        <link rel="stylesheet" href="myStyle.css">
+    </head>
+
+    <body class="centerText">
+        <h1 style="font-size: 500%;">    
+            Registrasi
+        </h1>
+
+        <br>
+        <br>
+
+        <h1 style="font-size: 150%;">
+            <table class="center" style="text-align: center;" border= "1px" height="200%" width="50%">
+                <tr>
+                    
+                </tr>
+
+                <tr>
+                    <th>
+                        Nama
+                    </th>
+
+                    <td>
+                        <input type="text" id="nama" placeholder="Jevon">
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>
+                        E-Mail
+                    </th>
+
+                    <td>
+                        <input type="email" id="email" placeholder="jevonsunjaya@gmail.com">
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>
+                        Nomor Telepon
+                    </th>
+
+                    <td>
+                        <input type="tel" id="tel" placeholder="081210740224">
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>
+                        Kota
+                    </th>
+
+                    <td>
+                        <input type="text" id="kota" placeholder="Jakarta">
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>
+                        Alamat
+                    </th>
+
+                    <td>
+                        <input type="text" id="alamat" placeholder="Jl. Kalibaru No. 123"
+                    </td>
+                </tr>
+
+            </table>
+        </h1>
+
+        <p>Submit data</p>
+        <button onclick="submit()">try it</button>
+
+        <p>Cek nama</p>
+        <p id="reg_nama"></p>
+        <p id="reg_email"></p>
+        <p id="reg_tel"></p>
+        <p id="reg_kota"></p>
+        <p id="reg_alamat"></p>
+
+        <script>
+            function submit(){
+                showResult("nama", "reg_nama");
+                showResult("email", "reg_email");
+                showResult("tel", "reg_tel");
+                showResult("kota", "reg_kota");
+                showResult("alamat", "reg_alamat");
+            }
+
+            function showResult(inId, outId){
+                document.getElementById(outId).innerHTML = document.getElementById(inId).value;
+                document.getElementById(outId).style.color = "white";
+                document.getElementById(outId).style.backgroundColor = "black";
+            }
+        </script>
+    </body>
+</html>
